@@ -1,0 +1,10 @@
+wwwroot/*.js
+node_modules
+typings
+dist
+
+#IDEs
+.idea
+
+yarn.lock
+package-lock.json

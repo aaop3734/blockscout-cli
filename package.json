@@ -1,0 +1,32 @@
+{
+  "name": "blockscout-cli",
+  "version": "0.0.1",
+  "description": "Blockscout CLI generator by Swagger Codegen",
+  "author": "@aaop3734",
+  "keywords": [
+    "axios",
+    "typescript",
+    "openapi-client",
+    "openapi-generator",
+    "blockscout",
+    "blockscout-cli"
+  ],
+  "license": "Unlicense",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc --outDir dist/",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">= 16 <18"
+  },
+  "dependencies": {
+    "axios": "^1.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.7",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  }
+}
