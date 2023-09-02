@@ -1,3 +1,7 @@
+[![NPM Version](https://img.shields.io/npm/v/blockscout-cli)](https://www.npmjs.com/package/blockscout-cli)
+[![NPM Downloads](https://img.shields.io/npm/dm/blockscout)](https://www.npmjs.com/package/blockscout-cli)
+[![Minified Size](https://img.shields.io/bundlephobia/min/blockscout-cli)](https://www.npmjs.com/package/blockscout-cli)
+
 # [BlockScout-CLI](https://github.com/aaop3734/blockscout-cli)
 
 A TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios) to make HTTP requests to the BlockScout API.
@@ -47,3 +51,12 @@ function Home() {
 
 export default Home
 ```
+
+## 🖲️ Roadmap
+
+| Feature                 | Status |
+| ----------------------- | ------ |
+| NextJS + Tanstack Query | ✅     |
+| NodeJS with ES Modules  | ⚠️     |
+| Typescript Strict       | ❌     |
+| React                   | ❌     |
