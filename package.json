@@ -1,17 +1,28 @@
 {
   "name": "blockscout-cli",
-  "version": "0.0.2-alpha.0",
-  "description": "Blockscout CLI generator by Swagger Codegen",
+  "version": "0.0.2-alpha.1",
+  "description": "Blockscout Client for any Front-end framework using NodeJS",
   "author": "@aaop3734",
   "keywords": [
-    "axios",
-    "typescript",
-    "openapi-client",
-    "openapi-generator",
     "blockscout",
-    "blockscout-cli"
+    "cli",
+    "client",
+    "web3"
   ],
-  "license": "Unlicense",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aaop3734/blockscout-cli"
+  },
+  "bugs": {
+    "url": "https://github.com/aaop3734/blockscout-cli/issues"
+  },
+  "license": "MIT",
+  "contributors": [
+    "aaop3734"
+  ],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "scripts": {
