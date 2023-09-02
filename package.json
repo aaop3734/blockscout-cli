@@ -1,6 +1,6 @@
 {
   "name": "blockscout-cli",
-  "version": "0.0.2-alpha.2",
+  "version": "0.0.2",
   "description": "Blockscout Client for any Front-end framework using NodeJS",
   "author": "@aaop3734",
   "keywords": [
