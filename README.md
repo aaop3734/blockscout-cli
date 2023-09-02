@@ -1,4 +1,6 @@
 # [BlockScout-CLI](https://github.com/aaop3734/blockscout-cli)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Faaop3734%2Fblockscout-cli.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Faaop3734%2Fblockscout-cli?ref=badge_shield)
+
 
 A TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios) to make HTTP requests to the BlockScout API.
 
@@ -47,3 +49,7 @@ function Home() {
 
 export default Home
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Faaop3734%2Fblockscout-cli.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Faaop3734%2Fblockscout-cli?ref=badge_large)
