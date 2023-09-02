@@ -1,50 +1,49 @@
-## @
+# [BlockScout-CLI](https://github.com/aaop3734/blockscout-cli)
 
-This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
+A TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios) to make HTTP requests to the BlockScout API.
 
-Environment
+## ⚙️ Configuration
 
-- Node.js
-- Webpack
-- Browserify
+In file `blockscout-cli.service.ts`
 
-Language level
+```typescript
+import { Configuration, DefaultApi } from 'blockscout-cli'
 
-- ES5 - you must have a Promises/A+ library installed
-- ES6
+const config = new Configuration({
+  basePath: 'https://testnet.a8scan.io/api/v2',
+})
 
-Module system
-
-- CommonJS
-- ES6 module system
-
-It can be used in both TypeScript and JavaScript. In TypeScript, the definition should be automatically resolved via `package.json`. ([Reference](http://www.typescriptlang.org/docs/handbook/typings-for-npm-packages.html))
-
-### Building
-
-To build and compile the typescript sources to javascript use:
-
-```
-npm install
-npm run build
+const BlockscoutService = new DefaultApi(config)
+export default BlockscoutService
 ```
 
-### Publishing
+## 🔨 Usage
 
-First build the package then run `npm publish`
+```tsx
+import React from 'react'
 
-### Consuming
+import { useGetSmartContract } from '@/hooks/useGetSmartContract'
+import BlockscoutService from '@/services/blockscout-cli.service'
 
-navigate to the folder of your consuming project and run one of the following commands.
+const blockScoutSearch = async (q: string | undefined) => {
+  const result = await BlockscoutService.search(q)
 
-_published:_
+  return result.data
+}
 
-```
-npm install @ --save
-```
+function Home() {
+  const onClick = async () => {
+    const result = await blockScoutSearch('USDT')
 
-_unPublished (not recommended):_
+    console.log(result)
+  }
 
-```
-npm install PATH_TO_GENERATED_PACKAGE --save
+  return (
+    <>
+      <button onClick={onClick}>Search</button>
+    </>
+  )
+}
+
+export default Home
 ```
