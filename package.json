@@ -1,12 +1,13 @@
 {
   "name": "blockscout-cli",
-  "version": "0.0.2",
-  "description": "Blockscout Client for any Front-end framework using NodeJS",
+  "version": "0.0.3",
+  "description": "Blockscout Client for any Front-end framework based on JavaScript",
   "author": "@aaop3734",
   "keywords": [
     "blockscout",
     "cli",
     "client",
+    "api",
     "web3"
   ],
   "repository": {
@@ -25,16 +26,17 @@
     "dist"
   ],
   "main": "./dist/index.js",
-  "typings": "./dist/index.d.ts",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc --outDir dist/",
+    "prebuild": "rm -rf ./dist",
     "prepublishOnly": "npm run build"
   },
   "engines": {
-    "node": ">= 16 <=18"
+    "node": ">= 14"
   },
   "dependencies": {
-    "axios": "^1.5.0"
+    "axios": "^0.27.2"
   },
   "devDependencies": {
     "@types/node": "^20.5.7",
