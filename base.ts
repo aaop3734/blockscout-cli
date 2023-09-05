@@ -1,6 +1,6 @@
-import { Configuration } from './configuration'
+import globalAxios, { type AxiosRequestConfig, type AxiosInstance } from 'axios'
 
-import globalAxios, { AxiosRequestConfig, AxiosInstance } from 'axios'
+import { Configuration } from './configuration'
 
 export const BASE_PATH = 'https://eth.blockscout.com/api/v2/'.replace(
   /\/+$/,
