@@ -9,23 +9,23 @@ export interface AddressCounters {
    * @type {string}
    * @memberof AddressCounters
    */
-  transactionsCount: string
+  transactions_count: string
   /**
    *
    * @type {string}
    * @memberof AddressCounters
    */
-  tokenTransfersCount: string
+  token_transfers_count: string
   /**
    *
    * @type {string}
    * @memberof AddressCounters
    */
-  gasUsageCount: string
+  gas_usage_count: string
   /**
    *
    * @type {string}
    * @memberof AddressCounters
    */
-  validationsCount: string
+  validations_count: string
 }

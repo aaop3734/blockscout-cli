@@ -45,11 +45,11 @@ export interface Token {
    * @type {string}
    * @memberof Token
    */
-  exchangeRate: string
+  exchange_rate: string
   /**
    *
    * @type {string}
    * @memberof Token
    */
-  totalSupply: string
+  total_supply: string
 }

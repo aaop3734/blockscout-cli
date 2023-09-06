@@ -9,19 +9,19 @@ export interface CoinBalanceHistoryEntry {
    * @type {string}
    * @memberof CoinBalanceHistoryEntry
    */
-  transactionHash?: string
+  transaction_hash?: string
   /**
    *
    * @type {number}
    * @memberof CoinBalanceHistoryEntry
    */
-  blockNumber: number
+  block_number: number
   /**
    *
    * @type {string}
    * @memberof CoinBalanceHistoryEntry
    */
-  blockTimestamp: string
+  block_timestamp: string
   /**
    *
    * @type {string}

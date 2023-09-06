@@ -15,5 +15,5 @@ export interface ExternalLibrary {
    * @type {string}
    * @memberof ExternalLibrary
    */
-  addressHash: string
+  address_hash: string
 }

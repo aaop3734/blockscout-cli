@@ -11,7 +11,7 @@ export interface NFTInstance {
    * @type {boolean}
    * @memberof NFTInstance
    */
-  isUnique: boolean
+  is_unique: boolean
   /**
    *
    * @type {string}
@@ -23,25 +23,25 @@ export interface NFTInstance {
    * @type {string}
    * @memberof NFTInstance
    */
-  holderAddressHash?: string
+  holder_address_hash?: string
   /**
    *
    * @type {string}
    * @memberof NFTInstance
    */
-  imageUrl?: string
+  image_url?: string
   /**
    *
    * @type {string}
    * @memberof NFTInstance
    */
-  animationUrl?: string
+  animation_url?: string
   /**
    *
    * @type {string}
    * @memberof NFTInstance
    */
-  externalAppUrl?: string
+  external_app_url?: string
   /**
    *
    * @type {any}

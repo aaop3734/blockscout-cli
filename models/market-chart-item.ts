@@ -15,11 +15,11 @@ export interface MarketChartItem {
    * @type {string}
    * @memberof MarketChartItem
    */
-  closingPrice: string
+  closing_price: string
   /**
    *
    * @type {string}
    * @memberof MarketChartItem
    */
-  marketCap: string
+  market_cap: string
 }

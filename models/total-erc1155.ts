@@ -9,7 +9,7 @@ export interface TotalERC1155 {
    * @type {string}
    * @memberof TotalERC1155
    */
-  tokenId: string
+  token_id: string
   /**
    *
    * @type {string}

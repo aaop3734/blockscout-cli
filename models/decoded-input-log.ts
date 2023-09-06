@@ -10,13 +10,13 @@ export interface DecodedInputLog {
    * @type {string}
    * @memberof DecodedInputLog
    */
-  methodCall: string
+  method_call: string
   /**
    *
    * @type {string}
    * @memberof DecodedInputLog
    */
-  methodId: string
+  method_id: string
   /**
    *
    * @type {Array<DecodedInputLogParameter>}

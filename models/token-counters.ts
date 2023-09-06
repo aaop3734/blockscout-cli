@@ -9,11 +9,11 @@ export interface TokenCounters {
    * @type {string}
    * @memberof TokenCounters
    */
-  tokenHoldersCount: string
+  token_holders_count: string
   /**
    *
    * @type {string}
    * @memberof TokenCounters
    */
-  transfersCount: string
+  transfers_count: string
 }

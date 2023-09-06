@@ -9,13 +9,13 @@ export interface AddressTag {
    * @type {string}
    * @memberof AddressTag
    */
-  addressHash: string
+  address_hash: string
   /**
    *
    * @type {string}
    * @memberof AddressTag
    */
-  displayName: string
+  display_name: string
   /**
    *
    * @type {string}

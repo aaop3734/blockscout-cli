@@ -9,13 +9,13 @@ export interface TokenInfo {
    * @type {string}
    * @memberof TokenInfo
    */
-  circulatingMarketCap: string
+  circulating_market_cap: string
   /**
    *
    * @type {string}
    * @memberof TokenInfo
    */
-  iconUrl: string
+  icon_url: string
   /**
    *
    * @type {string}
@@ -57,11 +57,11 @@ export interface TokenInfo {
    * @type {string}
    * @memberof TokenInfo
    */
-  exchangeRate: string
+  exchange_rate: string
   /**
    *
    * @type {string}
    * @memberof TokenInfo
    */
-  totalSupply: string
+  total_supply: string
 }

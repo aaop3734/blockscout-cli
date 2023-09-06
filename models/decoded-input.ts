@@ -10,13 +10,13 @@ export interface DecodedInput {
    * @type {string}
    * @memberof DecodedInput
    */
-  methodCall: string
+  method_call: string
   /**
    *
    * @type {string}
    * @memberof DecodedInput
    */
-  methodId: string
+  method_id: string
   /**
    *
    * @type {Array<DecodedInputParameter>}

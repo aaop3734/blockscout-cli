@@ -23,7 +23,7 @@ export interface Holder {
    * @type {string}
    * @memberof Holder
    */
-  tokenId?: string
+  token_id?: string
   /**
    *
    * @type {TokenInfo}

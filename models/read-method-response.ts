@@ -13,7 +13,7 @@ export interface ReadMethodResponse {
    * @type {boolean}
    * @memberof ReadMethodResponse
    */
-  isError: boolean
+  is_error: boolean
   /**
    *
    * @type {ExtendedRevertReasonAsMap | Error | DecodedInput | CodeAndMessage | OutputAndNames}

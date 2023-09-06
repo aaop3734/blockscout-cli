@@ -12,73 +12,73 @@ export interface SmartContract {
    * @type {string}
    * @memberof SmartContract
    */
-  verifiedTwinAddressHash?: string
+  verified_twin_address_hash?: string
   /**
    *
    * @type {boolean}
    * @memberof SmartContract
    */
-  isVerified?: boolean
+  is_verified?: boolean
   /**
    *
    * @type {boolean}
    * @memberof SmartContract
    */
-  isChangedBytecode?: boolean
+  is_changed_bytecode?: boolean
   /**
    *
    * @type {boolean}
    * @memberof SmartContract
    */
-  isPartiallyVerified?: boolean
+  is_partially_verified?: boolean
   /**
    *
    * @type {boolean}
    * @memberof SmartContract
    */
-  isFullyVerified?: boolean
+  is_fully_verified?: boolean
   /**
    *
    * @type {boolean}
    * @memberof SmartContract
    */
-  isVerifiedViaSourcify?: boolean
+  is_verified_via_sourcify?: boolean
   /**
    *
    * @type {boolean}
    * @memberof SmartContract
    */
-  isVerifiedViaEthBytecodeDb?: boolean
+  is_verified_via_eth_bytecode_db?: boolean
   /**
    *
    * @type {boolean}
    * @memberof SmartContract
    */
-  isVyperContract?: boolean
+  is_vyper_contract?: boolean
   /**
    *
    * @type {boolean}
    * @memberof SmartContract
    */
-  isSelfDestructed?: boolean
+  is_self_destructed?: boolean
   /**
    *
    * @type {boolean}
    * @memberof SmartContract
    */
-  canBeVisualizedViaSol2uml?: boolean
+  can_be_visualized_via_sol2uml?: boolean
   /**
    *
    * @type {string}
    * @memberof SmartContract
    */
-  minimalProxyAddressHash?: string
+  minimal_proxy_address_hash?: string
   /**
    *
    * @type {string}
    * @memberof SmartContract
    */
-  sourcifyRepoUrl?: string
+  sourcify_repo_url?: string
   /**
    *
    * @type {string}
@@ -90,31 +90,31 @@ export interface SmartContract {
    * @type {boolean}
    * @memberof SmartContract
    */
-  optimizationEnabled?: boolean
+  optimization_enabled?: boolean
   /**
    *
    * @type {number}
    * @memberof SmartContract
    */
-  optimizationsRuns?: number
+  optimizations_runs?: number
   /**
    *
    * @type {string}
    * @memberof SmartContract
    */
-  compilerVersion?: string
+  compiler_version?: string
   /**
    *
    * @type {string}
    * @memberof SmartContract
    */
-  evmVersion?: string
+  evm_version?: string
   /**
    *
    * @type {string}
    * @memberof SmartContract
    */
-  verifiedAt?: string
+  verified_at?: string
   /**
    *
    * @type {string}
@@ -126,55 +126,55 @@ export interface SmartContract {
    * @type {string}
    * @memberof SmartContract
    */
-  sourceCode?: string
+  source_code?: string
   /**
    *
    * @type {string}
    * @memberof SmartContract
    */
-  filePath?: string
+  file_path?: string
   /**
    *
    * @type {any}
    * @memberof SmartContract
    */
-  compilerSettings?: any
+  compiler_settings?: any
   /**
    *
    * @type {string}
    * @memberof SmartContract
    */
-  constructorArgs?: string
+  constructor_args?: string
   /**
    *
    * @type {Array<ContractSource>}
    * @memberof SmartContract
    */
-  additionalSources?: Array<ContractSource>
+  additional_sources?: Array<ContractSource>
   /**
    *
    * @type {Array<ConstructorArguments>}
    * @memberof SmartContract
    */
-  decodedConstructorArgs?: Array<ConstructorArguments>
+  decoded_constructor_args?: Array<ConstructorArguments>
   /**
    *
    * @type {string}
    * @memberof SmartContract
    */
-  deployedBytecode?: string
+  deployed_bytecode?: string
   /**
    *
    * @type {string}
    * @memberof SmartContract
    */
-  creationBytecode?: string
+  creation_bytecode?: string
   /**
    *
    * @type {Array<ExternalLibrary>}
    * @memberof SmartContract
    */
-  externalLibraries?: Array<ExternalLibrary>
+  external_libraries?: Array<ExternalLibrary>
   /**
    *
    * @type {string}

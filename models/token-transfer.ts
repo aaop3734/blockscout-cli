@@ -15,7 +15,7 @@ export interface TokenTransfer {
    * @type {string}
    * @memberof TokenTransfer
    */
-  blockHash: string
+  block_hash: string
   /**
    *
    * @type {AddressParam}
@@ -27,7 +27,7 @@ export interface TokenTransfer {
    * @type {string}
    * @memberof TokenTransfer
    */
-  logIndex: string
+  log_index: string
   /**
    *
    * @type {string}
@@ -63,7 +63,7 @@ export interface TokenTransfer {
    * @type {string}
    * @memberof TokenTransfer
    */
-  txHash: string
+  tx_hash: string
   /**
    *
    * @type {string}

@@ -9,23 +9,23 @@ export interface IndexingStatus {
    * @type {boolean}
    * @memberof IndexingStatus
    */
-  finishedIndexing: boolean
+  finished_indexing: boolean
   /**
    *
    * @type {boolean}
    * @memberof IndexingStatus
    */
-  finishedIndexingBlocks: boolean
+  finished_indexing_blocks: boolean
   /**
    *
    * @type {string}
    * @memberof IndexingStatus
    */
-  indexedBlocksRatio: string
+  indexed_blocks_ratio: string
   /**
    *
    * @type {string}
    * @memberof IndexingStatus
    */
-  indexedInternalTransactionsRatio: string
+  indexed_internal_transactions_ratio: string
 }

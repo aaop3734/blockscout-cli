@@ -26,7 +26,7 @@ export interface Transaction {
    * @type {number}
    * @memberof Transaction
    */
-  gasLimit: number
+  gas_limit: number
   /**
    *
    * @type {number}
@@ -62,7 +62,7 @@ export interface Transaction {
    * @type {string}
    * @memberof Transaction
    */
-  exchangeRate: string
+  exchange_rate: string
   /**
    *
    * @type {AddressParam}
@@ -74,13 +74,13 @@ export interface Transaction {
    * @type {string}
    * @memberof Transaction
    */
-  txBurntFee: string
+  tx_burnt_fee: string
   /**
    *
    * @type {string}
    * @memberof Transaction
    */
-  maxFeePerGas: string
+  max_fee_per_gas: string
   /**
    *
    * @type {string}
@@ -98,19 +98,19 @@ export interface Transaction {
    * @type {string}
    * @memberof Transaction
    */
-  gasPrice: string
+  gas_price: string
   /**
    *
    * @type {string}
    * @memberof Transaction
    */
-  priorityFee: string
+  priority_fee: string
   /**
    *
    * @type {string}
    * @memberof Transaction
    */
-  baseFeePerGas: string
+  base_fee_per_gas: string
   /**
    *
    * @type {AddressParam}
@@ -122,25 +122,25 @@ export interface Transaction {
    * @type {Array<TokenTransfer>}
    * @memberof Transaction
    */
-  tokenTransfers: Array<TokenTransfer>
+  token_transfers: Array<TokenTransfer>
   /**
    *
    * @type {Array<string>}
    * @memberof Transaction
    */
-  txTypes: Array<string>
+  tx_types: Array<string>
   /**
    *
    * @type {string}
    * @memberof Transaction
    */
-  gasUsed: string
+  gas_used: string
   /**
    *
    * @type {AddressParam}
    * @memberof Transaction
    */
-  createdContract: AddressParam
+  created_contract: AddressParam
   /**
    *
    * @type {number}
@@ -158,7 +158,7 @@ export interface Transaction {
    * @type {boolean}
    * @memberof Transaction
    */
-  hasErrorInInternalTxs: boolean
+  has_error_in_internal_txs: boolean
   /**
    *
    * @type {Array<TransactionAction>}
@@ -170,19 +170,19 @@ export interface Transaction {
    * @type {DecodedInput}
    * @memberof Transaction
    */
-  decodedInput: DecodedInput
+  decoded_input: DecodedInput
   /**
    *
    * @type {boolean}
    * @memberof Transaction
    */
-  tokenTransfersOverflow: boolean
+  token_transfers_overflow: boolean
   /**
    *
    * @type {string}
    * @memberof Transaction
    */
-  rawInput: string
+  raw_input: string
   /**
    *
    * @type {string}
@@ -194,23 +194,23 @@ export interface Transaction {
    * @type {string}
    * @memberof Transaction
    */
-  maxPriorityFeePerGas: string
+  max_priority_fee_per_gas: string
   /**
    *
    * @type {string}
    * @memberof Transaction
    */
-  revertReason: string
+  revert_reason: string
   /**
    *
    * @type {any}
    * @memberof Transaction
    */
-  confirmationDuration: any
+  confirmation_duration: any
   /**
    *
    * @type {string}
    * @memberof Transaction
    */
-  txTag: string
+  tx_tag: string
 }
