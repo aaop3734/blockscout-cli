@@ -12,13 +12,13 @@ export interface Address {
    * @type {string}
    * @memberof Address
    */
-  creatorAddressHash?: string
+  creator_address_hash?: string
   /**
    *
    * @type {string}
    * @memberof Address
    */
-  creationTxHash?: string
+  creation_tx_hash?: string
   /**
    *
    * @type {TokenInfo}
@@ -30,25 +30,25 @@ export interface Address {
    * @type {string}
    * @memberof Address
    */
-  coinBalance?: string
+  coin_balance?: string
   /**
    *
    * @type {string}
    * @memberof Address
    */
-  exchangeRate?: string
+  exchange_rate?: string
   /**
    *
    * @type {string}
    * @memberof Address
    */
-  implementationAddress?: string
+  implementation_address?: string
   /**
    *
    * @type {number}
    * @memberof Address
    */
-  blockNumberBalanceUpdatedAt?: number
+  block_number_balance_updated_at?: number
   /**
    *
    * @type {string}
@@ -60,7 +60,7 @@ export interface Address {
    * @type {string}
    * @memberof Address
    */
-  implementationName?: string
+  implementation_name?: string
   /**
    *
    * @type {string}
@@ -72,101 +72,101 @@ export interface Address {
    * @type {boolean}
    * @memberof Address
    */
-  isContract?: boolean
+  is_contract?: boolean
   /**
    *
    * @type {Array<AddressTag>}
    * @memberof Address
    */
-  privateTags?: Array<AddressTag>
+  private_tags?: Array<AddressTag>
   /**
    *
    * @type {Array<WatchlistName>}
    * @memberof Address
    */
-  watchlistNames?: Array<WatchlistName>
+  watchlist_names?: Array<WatchlistName>
   /**
    *
    * @type {Array<AddressTag>}
    * @memberof Address
    */
-  publicTags?: Array<AddressTag>
+  public_tags?: Array<AddressTag>
   /**
    *
    * @type {boolean}
    * @memberof Address
    */
-  isVerified?: boolean
+  is_verified?: boolean
   /**
    *
    * @type {boolean}
    * @memberof Address
    */
-  hasBeaconChainWithdrawals?: boolean
+  has_beacon_chain_withdrawals?: boolean
   /**
    *
    * @type {boolean}
    * @memberof Address
    */
-  hasCustomMethodsRead?: boolean
+  has_custom_methods_read?: boolean
   /**
    *
    * @type {boolean}
    * @memberof Address
    */
-  hasCustomMethodsWrite?: boolean
+  has_custom_methods_write?: boolean
   /**
    *
    * @type {boolean}
    * @memberof Address
    */
-  hasDecompiledCode?: boolean
+  has_decompiled_code?: boolean
   /**
    *
    * @type {boolean}
    * @memberof Address
    */
-  hasLogs?: boolean
+  has_logs?: boolean
   /**
    *
    * @type {boolean}
    * @memberof Address
    */
-  hasMethodsRead?: boolean
+  has_methods_read?: boolean
   /**
    *
    * @type {boolean}
    * @memberof Address
    */
-  hasMethodsWrite?: boolean
+  has_methods_write?: boolean
   /**
    *
    * @type {boolean}
    * @memberof Address
    */
-  hasMethodsReadProxy?: boolean
+  has_methods_read_proxy?: boolean
   /**
    *
    * @type {boolean}
    * @memberof Address
    */
-  hasMethodsWriteProxy?: boolean
+  has_methods_write_proxy?: boolean
   /**
    *
    * @type {boolean}
    * @memberof Address
    */
-  hasTokenTransfers?: boolean
+  has_token_transfers?: boolean
   /**
    *
    * @type {boolean}
    * @memberof Address
    */
-  hasTokens?: boolean
+  has_tokens?: boolean
   /**
    *
    * @type {boolean}
    * @memberof Address
    */
-  hasValidatedBlocks?: boolean
+  has_validated_blocks?: boolean
 }

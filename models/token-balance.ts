@@ -11,7 +11,7 @@ export interface TokenBalance {
    * @type {NFTInstance}
    * @memberof TokenBalance
    */
-  tokenInstance?: NFTInstance
+  token_instance?: NFTInstance
   /**
    *
    * @type {string}
@@ -23,7 +23,7 @@ export interface TokenBalance {
    * @type {string}
    * @memberof TokenBalance
    */
-  tokenId: string
+  token_id: string
   /**
    *
    * @type {Token}

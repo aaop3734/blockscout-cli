@@ -11,19 +11,19 @@ export interface Block {
    * @type {string}
    * @memberof Block
    */
-  baseFeePerGas: string
+  base_fee_per_gas: string
   /**
    *
    * @type {string}
    * @memberof Block
    */
-  burntFees: string
+  burnt_fees: string
   /**
    *
    * @type {number}
    * @memberof Block
    */
-  burntFeesPercentage: number
+  burnt_fees_percentage: number
   /**
    *
    * @type {string}
@@ -35,31 +35,31 @@ export interface Block {
    * @type {string}
    * @memberof Block
    */
-  extraData: string
+  extra_data: string
   /**
    *
    * @type {string}
    * @memberof Block
    */
-  gasLimit: string
+  gas_limit: string
   /**
    *
    * @type {number}
    * @memberof Block
    */
-  gasTargetPercentage: number
+  gas_target_percentage: number
   /**
    *
    * @type {string}
    * @memberof Block
    */
-  gasUsed: string
+  gas_used: string
   /**
    *
    * @type {number}
    * @memberof Block
    */
-  gasUsedPercentage: number
+  gas_used_percentage: number
   /**
    *
    * @type {string}
@@ -89,13 +89,13 @@ export interface Block {
    * @type {string}
    * @memberof Block
    */
-  parentHash: string
+  parent_hash: string
   /**
    *
    * @type {string}
    * @memberof Block
    */
-  priorityFee: string
+  priority_fee: string
   /**
    *
    * @type {Array<Reward>}
@@ -113,7 +113,7 @@ export interface Block {
    * @type {string}
    * @memberof Block
    */
-  stateRoot: string
+  state_root: string
   /**
    *
    * @type {string}
@@ -125,19 +125,19 @@ export interface Block {
    * @type {string}
    * @memberof Block
    */
-  totalDifficulty: string
+  total_difficulty: string
   /**
    *
    * @type {number}
    * @memberof Block
    */
-  txCount: number
+  tx_count: number
   /**
    *
    * @type {string}
    * @memberof Block
    */
-  txFees: string
+  tx_fees: string
   /**
    *
    * @type {string}
@@ -149,11 +149,11 @@ export interface Block {
    * @type {Array<string>}
    * @memberof Block
    */
-  unclesHashes: Array<string>
+  uncles_hashes: Array<string>
   /**
    *
    * @type {number}
    * @memberof Block
    */
-  withdrawalsCount: number
+  withdrawals_count: number
 }

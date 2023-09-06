@@ -16,13 +16,13 @@ export interface TransactionReward {
    * @type {string}
    * @memberof TransactionReward
    */
-  emissionReward: string
+  emission_reward: string
   /**
    *
    * @type {string}
    * @memberof TransactionReward
    */
-  blockHash: string
+  block_hash: string
   /**
    *
    * @type {AddressParam}

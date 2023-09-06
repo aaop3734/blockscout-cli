@@ -21,5 +21,5 @@ export interface RawTraceSelfDestructAction {
    * @type {string}
    * @memberof RawTraceSelfDestructAction
    */
-  refundAddress: string
+  refund_address: string
 }

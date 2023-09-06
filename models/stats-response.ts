@@ -9,71 +9,71 @@ export interface StatsResponse {
    * @type {string}
    * @memberof StatsResponse
    */
-  totalBlocks: string
+  total_blocks: string
   /**
    *
    * @type {string}
    * @memberof StatsResponse
    */
-  totalAddresses: string
+  total_addresses: string
   /**
    *
    * @type {string}
    * @memberof StatsResponse
    */
-  totalTransactions: string
+  total_transactions: string
   /**
    *
    * @type {number}
    * @memberof StatsResponse
    */
-  averageBlockTime: number
+  average_block_time: number
   /**
    *
    * @type {string}
    * @memberof StatsResponse
    */
-  coinPrice: string
+  coin_price: string
   /**
    *
    * @type {string}
    * @memberof StatsResponse
    */
-  totalGasUsed: string
+  total_gas_used: string
   /**
    *
    * @type {string}
    * @memberof StatsResponse
    */
-  transactionsToday: string
+  transactions_today: string
   /**
    *
    * @type {string}
    * @memberof StatsResponse
    */
-  gasUsedToday: string
+  gas_used_today: string
   /**
    *
    * @type {any}
    * @memberof StatsResponse
    */
-  gasPrices: any
+  gas_prices: any
   /**
    *
    * @type {string}
    * @memberof StatsResponse
    */
-  staticGasPrice: string
+  static_gas_price: string
   /**
    *
    * @type {string}
    * @memberof StatsResponse
    */
-  marketCap: string
+  market_cap: string
   /**
    *
    * @type {number}
    * @memberof StatsResponse
    */
-  networkUtilizationPercentage: number
+  network_utilization_percentage: number
 }

@@ -9,7 +9,7 @@ export interface RawTraceCallAction {
    * @type {string}
    * @memberof RawTraceCallAction
    */
-  callType: string
+  call_type: string
   /**
    *
    * @type {string}

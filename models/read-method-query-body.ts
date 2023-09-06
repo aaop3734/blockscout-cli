@@ -15,7 +15,7 @@ export interface ReadMethodQueryBody {
    * @type {string}
    * @memberof ReadMethodQueryBody
    */
-  methodId: string
+  method_id: string
   /**
    *
    * @type {string}
@@ -27,5 +27,5 @@ export interface ReadMethodQueryBody {
    * @type {string}
    * @memberof ReadMethodQueryBody
    */
-  contractType?: string
+  contract_type?: string
 }

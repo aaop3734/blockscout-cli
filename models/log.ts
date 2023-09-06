@@ -17,13 +17,13 @@ export interface Log {
    * @type {string}
    * @memberof Log
    */
-  blockHash?: string
+  block_hash?: string
   /**
    *
    * @type {number}
    * @memberof Log
    */
-  blockNumber?: number
+  block_number?: number
   /**
    *
    * @type {string}
@@ -47,7 +47,7 @@ export interface Log {
    * @type {AddressParam}
    * @memberof Log
    */
-  smartContract: AddressParam
+  smart_contract: AddressParam
   /**
    *
    * @type {Array<string>}
@@ -59,5 +59,5 @@ export interface Log {
    * @type {string}
    * @memberof Log
    */
-  txHash: string
+  tx_hash: string
 }

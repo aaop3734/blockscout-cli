@@ -22,7 +22,7 @@ export interface Withdrawal {
    * @type {number}
    * @memberof Withdrawal
    */
-  validatorIndex: number
+  validator_index: number
   /**
    *
    * @type {AddressParam}
@@ -34,7 +34,7 @@ export interface Withdrawal {
    * @type {number}
    * @memberof Withdrawal
    */
-  blockNumber?: number
+  block_number?: number
   /**
    *
    * @type {string}

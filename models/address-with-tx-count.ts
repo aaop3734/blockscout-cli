@@ -13,5 +13,5 @@ export interface AddressWithTxCount extends Address {
    * @type {string}
    * @memberof AddressWithTxCount
    */
-  txCount: string
+  tx_count: string
 }

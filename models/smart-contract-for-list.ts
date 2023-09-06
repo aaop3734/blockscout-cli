@@ -16,13 +16,13 @@ export interface SmartContractForList {
    * @type {string}
    * @memberof SmartContractForList
    */
-  coinBalance: string
+  coin_balance: string
   /**
    *
    * @type {string}
    * @memberof SmartContractForList
    */
-  compilerVersion: string
+  compiler_version: string
   /**
    *
    * @type {string}
@@ -34,29 +34,29 @@ export interface SmartContractForList {
    * @type {boolean}
    * @memberof SmartContractForList
    */
-  hasConstructorArgs: boolean
+  has_constructor_args: boolean
   /**
    *
    * @type {boolean}
    * @memberof SmartContractForList
    */
-  optimizationEnabled: boolean
+  optimization_enabled: boolean
   /**
    *
    * @type {number}
    * @memberof SmartContractForList
    */
-  txCount: number
+  tx_count: number
   /**
    *
    * @type {string}
    * @memberof SmartContractForList
    */
-  verifiedAt: string
+  verified_at: string
   /**
    *
    * @type {number}
    * @memberof SmartContractForList
    */
-  marketCap?: number
+  market_cap?: number
 }

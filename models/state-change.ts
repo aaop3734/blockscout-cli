@@ -25,7 +25,7 @@ export interface StateChange {
    * @type {boolean}
    * @memberof StateChange
    */
-  isMiner: boolean
+  is_miner: boolean
   /**
    *
    * @type {AddressParam}
@@ -37,19 +37,19 @@ export interface StateChange {
    * @type {string}
    * @memberof StateChange
    */
-  balanceBefore?: string
+  balance_before?: string
   /**
    *
    * @type {string}
    * @memberof StateChange
    */
-  balanceAfter?: string
+  balance_after?: string
   /**
    *
    * @type {string}
    * @memberof StateChange
    */
-  tokenId?: string
+  token_id?: string
   /**
    *
    * @type {NFTChangesArray | ERC20Or1155OrCoinChange}

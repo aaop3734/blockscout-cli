@@ -1,8 +1,8 @@
 import { RawTraceCallAction } from './raw-trace-call-action'
-import { RawTraceCallResult } from './raw-trace-call-result'
 import { RawTraceCreateAction } from './raw-trace-create-action'
-import { RawTraceCreateResult } from './raw-trace-create-result'
 import { RawTraceSelfDestructAction } from './raw-trace-self-destruct-action'
+import { RawTraceCreateResult } from '../results/raw-trace-create-result'
+import { RawTraceCallResult } from '../results/raw-trace-call-result'
 /**
  *
  * @export
@@ -26,7 +26,7 @@ export interface RawTrace {
    * @type {Array<number>}
    * @memberof RawTrace
    */
-  traceAddress: Array<number>
+  trace_address: Array<number>
   /**
    *
    * @type {string}

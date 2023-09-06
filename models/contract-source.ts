@@ -9,11 +9,11 @@ export interface ContractSource {
    * @type {string}
    * @memberof ContractSource
    */
-  filePath?: string
+  file_path?: string
   /**
    *
    * @type {string}
    * @memberof ContractSource
    */
-  sourceCode?: string
+  source_code?: string
 }

@@ -15,24 +15,24 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get address info
-     * @param {string} addressHash Address hash
+     * @param {string} address_hash Address hash
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getAddress: async (
-      addressHash: string,
+      address_hash: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'addressHash' is not null or undefined
-      if (addressHash === null || addressHash === undefined) {
+      // verify required parameter 'address_hash' is not null or undefined
+      if (address_hash === null || address_hash === undefined) {
         throw new RequiredError(
-          'addressHash',
-          'Required parameter addressHash was null or undefined when calling getAddress.',
+          'address_hash',
+          'Required parameter address_hash was null or undefined when calling getAddress.',
         )
       }
       const localVarPath = `/addresses/{address_hash}`.replace(
         `{${'address_hash'}}`,
-        encodeURIComponent(String(addressHash)),
+        encodeURIComponent(String(address_hash)),
       )
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -73,24 +73,24 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get blocks validated by address
-     * @param {string} addressHash Address hash
+     * @param {string} address_hash Address hash
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getAddressBlocksValidated: async (
-      addressHash: string,
+      address_hash: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'addressHash' is not null or undefined
-      if (addressHash === null || addressHash === undefined) {
+      // verify required parameter 'address_hash' is not null or undefined
+      if (address_hash === null || address_hash === undefined) {
         throw new RequiredError(
-          'addressHash',
-          'Required parameter addressHash was null or undefined when calling getAddressBlocksValidated.',
+          'address_hash',
+          'Required parameter address_hash was null or undefined when calling getAddressBlocksValidated.',
         )
       }
       const localVarPath = `/addresses/{address_hash}/blocks-validated`.replace(
         `{${'address_hash'}}`,
-        encodeURIComponent(String(addressHash)),
+        encodeURIComponent(String(address_hash)),
       )
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -131,25 +131,25 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get address coin balance history
-     * @param {string} addressHash Address hash
+     * @param {string} address_hash Address hash
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getAddressCoinBalanceHistory: async (
-      addressHash: string,
+      address_hash: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'addressHash' is not null or undefined
-      if (addressHash === null || addressHash === undefined) {
+      // verify required parameter 'address_hash' is not null or undefined
+      if (address_hash === null || address_hash === undefined) {
         throw new RequiredError(
-          'addressHash',
-          'Required parameter addressHash was null or undefined when calling getAddressCoinBalanceHistory.',
+          'address_hash',
+          'Required parameter address_hash was null or undefined when calling getAddressCoinBalanceHistory.',
         )
       }
       const localVarPath =
         `/addresses/{address_hash}/coin-balance-history`.replace(
           `{${'address_hash'}}`,
-          encodeURIComponent(String(addressHash)),
+          encodeURIComponent(String(address_hash)),
         )
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -190,25 +190,25 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get address coin balance history by day
-     * @param {string} addressHash Address hash
+     * @param {string} address_hash Address hash
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getAddressCoinBalanceHistoryByDay: async (
-      addressHash: string,
+      address_hash: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'addressHash' is not null or undefined
-      if (addressHash === null || addressHash === undefined) {
+      // verify required parameter 'address_hash' is not null or undefined
+      if (address_hash === null || address_hash === undefined) {
         throw new RequiredError(
-          'addressHash',
-          'Required parameter addressHash was null or undefined when calling getAddressCoinBalanceHistoryByDay.',
+          'address_hash',
+          'Required parameter address_hash was null or undefined when calling getAddressCoinBalanceHistoryByDay.',
         )
       }
       const localVarPath =
         `/addresses/{address_hash}/coin-balance-history-by-day`.replace(
           `{${'address_hash'}}`,
-          encodeURIComponent(String(addressHash)),
+          encodeURIComponent(String(address_hash)),
         )
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -249,24 +249,24 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get address counters
-     * @param {string} addressHash Address hash
+     * @param {string} address_hash Address hash
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getAddressCounters: async (
-      addressHash: string,
+      address_hash: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'addressHash' is not null or undefined
-      if (addressHash === null || addressHash === undefined) {
+      // verify required parameter 'address_hash' is not null or undefined
+      if (address_hash === null || address_hash === undefined) {
         throw new RequiredError(
-          'addressHash',
-          'Required parameter addressHash was null or undefined when calling getAddressCounters.',
+          'address_hash',
+          'Required parameter address_hash was null or undefined when calling getAddressCounters.',
         )
       }
       const localVarPath = `/addresses/{address_hash}/counters`.replace(
         `{${'address_hash'}}`,
-        encodeURIComponent(String(addressHash)),
+        encodeURIComponent(String(address_hash)),
       )
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -307,27 +307,27 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get address internal txs
-     * @param {string} addressHash Address hash
+     * @param {string} address_hash Address hash
      * @param {string} [filter]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getAddressInternalTxs: async (
-      addressHash: string,
+      address_hash: string,
       filter?: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'addressHash' is not null or undefined
-      if (addressHash === null || addressHash === undefined) {
+      // verify required parameter 'address_hash' is not null or undefined
+      if (address_hash === null || address_hash === undefined) {
         throw new RequiredError(
-          'addressHash',
-          'Required parameter addressHash was null or undefined when calling getAddressInternalTxs.',
+          'address_hash',
+          'Required parameter address_hash was null or undefined when calling getAddressInternalTxs.',
         )
       }
       const localVarPath =
         `/addresses/{address_hash}/internal-transactions`.replace(
           `{${'address_hash'}}`,
-          encodeURIComponent(String(addressHash)),
+          encodeURIComponent(String(address_hash)),
         )
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -372,24 +372,24 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get address logs
-     * @param {string} addressHash Address hash
+     * @param {string} address_hash Address hash
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getAddressLogs: async (
-      addressHash: string,
+      address_hash: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'addressHash' is not null or undefined
-      if (addressHash === null || addressHash === undefined) {
+      // verify required parameter 'address_hash' is not null or undefined
+      if (address_hash === null || address_hash === undefined) {
         throw new RequiredError(
-          'addressHash',
-          'Required parameter addressHash was null or undefined when calling getAddressLogs.',
+          'address_hash',
+          'Required parameter address_hash was null or undefined when calling getAddressLogs.',
         )
       }
       const localVarPath = `/addresses/{address_hash}/logs`.replace(
         `{${'address_hash'}}`,
-        encodeURIComponent(String(addressHash)),
+        encodeURIComponent(String(address_hash)),
       )
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -430,24 +430,24 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get blocks validated by address
-     * @param {string} addressHash Address hash
+     * @param {string} address_hash Address hash
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getAddressTokenBalances: async (
-      addressHash: string,
+      address_hash: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'addressHash' is not null or undefined
-      if (addressHash === null || addressHash === undefined) {
+      // verify required parameter 'address_hash' is not null or undefined
+      if (address_hash === null || address_hash === undefined) {
         throw new RequiredError(
-          'addressHash',
-          'Required parameter addressHash was null or undefined when calling getAddressTokenBalances.',
+          'address_hash',
+          'Required parameter address_hash was null or undefined when calling getAddressTokenBalances.',
         )
       }
       const localVarPath = `/addresses/{address_hash}/token-balances`.replace(
         `{${'address_hash'}}`,
-        encodeURIComponent(String(addressHash)),
+        encodeURIComponent(String(address_hash)),
       )
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -488,7 +488,7 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get address token transfers
-     * @param {string} addressHash Address hash
+     * @param {string} address_hash Address hash
      * @param {string} [type]
      * @param {string} [filter]
      * @param {string} [token]
@@ -496,22 +496,22 @@ export const DefaultApiAxiosParamCreator = function (
      * @throws {RequiredError}
      */
     getAddressTokenTransfers: async (
-      addressHash: string,
+      address_hash: string,
       type?: string,
       filter?: string,
       token?: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'addressHash' is not null or undefined
-      if (addressHash === null || addressHash === undefined) {
+      // verify required parameter 'address_hash' is not null or undefined
+      if (address_hash === null || address_hash === undefined) {
         throw new RequiredError(
-          'addressHash',
-          'Required parameter addressHash was null or undefined when calling getAddressTokenTransfers.',
+          'address_hash',
+          'Required parameter address_hash was null or undefined when calling getAddressTokenTransfers.',
         )
       }
       const localVarPath = `/addresses/{address_hash}/token-transfers`.replace(
         `{${'address_hash'}}`,
-        encodeURIComponent(String(addressHash)),
+        encodeURIComponent(String(address_hash)),
       )
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -564,26 +564,26 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get blocks validated by address
-     * @param {string} addressHash Address hash
+     * @param {string} address_hash Address hash
      * @param {string} [type]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getAddressTokens: async (
-      addressHash: string,
+      address_hash: string,
       type?: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'addressHash' is not null or undefined
-      if (addressHash === null || addressHash === undefined) {
+      // verify required parameter 'address_hash' is not null or undefined
+      if (address_hash === null || address_hash === undefined) {
         throw new RequiredError(
-          'addressHash',
-          'Required parameter addressHash was null or undefined when calling getAddressTokens.',
+          'address_hash',
+          'Required parameter address_hash was null or undefined when calling getAddressTokens.',
         )
       }
       const localVarPath = `/addresses/{address_hash}/tokens`.replace(
         `{${'address_hash'}}`,
-        encodeURIComponent(String(addressHash)),
+        encodeURIComponent(String(address_hash)),
       )
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -628,26 +628,26 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get address txs
-     * @param {string} addressHash Address hash
+     * @param {string} address_hash Address hash
      * @param {string} [filter]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getAddressTxs: async (
-      addressHash: string,
+      address_hash: string,
       filter?: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'addressHash' is not null or undefined
-      if (addressHash === null || addressHash === undefined) {
+      // verify required parameter 'address_hash' is not null or undefined
+      if (address_hash === null || address_hash === undefined) {
         throw new RequiredError(
-          'addressHash',
-          'Required parameter addressHash was null or undefined when calling getAddressTxs.',
+          'address_hash',
+          'Required parameter address_hash was null or undefined when calling getAddressTxs.',
         )
       }
       const localVarPath = `/addresses/{address_hash}/transactions`.replace(
         `{${'address_hash'}}`,
-        encodeURIComponent(String(addressHash)),
+        encodeURIComponent(String(address_hash)),
       )
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -692,24 +692,24 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get address withdrawals
-     * @param {string} addressHash Address hash
+     * @param {string} address_hash Address hash
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getAddressWithdrawals: async (
-      addressHash: string,
+      address_hash: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'addressHash' is not null or undefined
-      if (addressHash === null || addressHash === undefined) {
+      // verify required parameter 'address_hash' is not null or undefined
+      if (address_hash === null || address_hash === undefined) {
         throw new RequiredError(
-          'addressHash',
-          'Required parameter addressHash was null or undefined when calling getAddressWithdrawals.',
+          'address_hash',
+          'Required parameter address_hash was null or undefined when calling getAddressWithdrawals.',
         )
       }
       const localVarPath = `/addresses/{address_hash}/withdrawals`.replace(
         `{${'address_hash'}}`,
-        encodeURIComponent(String(addressHash)),
+        encodeURIComponent(String(address_hash)),
       )
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -1069,25 +1069,25 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get internal txs
-     * @param {string} transactionHash Transaction hash
+     * @param {string} transaction_hash Transaction hash
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getInternalTxs: async (
-      transactionHash: string,
+      transaction_hash: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'transactionHash' is not null or undefined
-      if (transactionHash === null || transactionHash === undefined) {
+      // verify required parameter 'transaction_hash' is not null or undefined
+      if (transaction_hash === null || transaction_hash === undefined) {
         throw new RequiredError(
-          'transactionHash',
-          'Required parameter transactionHash was null or undefined when calling getInternalTxs.',
+          'transaction_hash',
+          'Required parameter transaction_hash was null or undefined when calling getInternalTxs.',
         )
       }
       const localVarPath =
         `/transactions/{transaction_hash}/internal-transactions`.replace(
           `{${'transaction_hash'}}`,
-          encodeURIComponent(String(transactionHash)),
+          encodeURIComponent(String(transaction_hash)),
         )
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -1174,24 +1174,24 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get logs
-     * @param {string} transactionHash Transaction hash
+     * @param {string} transaction_hash Transaction hash
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getLogs: async (
-      transactionHash: string,
+      transaction_hash: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'transactionHash' is not null or undefined
-      if (transactionHash === null || transactionHash === undefined) {
+      // verify required parameter 'transaction_hash' is not null or undefined
+      if (transaction_hash === null || transaction_hash === undefined) {
         throw new RequiredError(
-          'transactionHash',
-          'Required parameter transactionHash was null or undefined when calling getLogs.',
+          'transaction_hash',
+          'Required parameter transaction_hash was null or undefined when calling getLogs.',
         )
       }
       const localVarPath = `/transactions/{transaction_hash}/logs`.replace(
         `{${'transaction_hash'}}`,
-        encodeURIComponent(String(transactionHash)),
+        encodeURIComponent(String(transaction_hash)),
       )
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -1370,21 +1370,21 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get NFT instance by id
-     * @param {string} addressHash Address hash
+     * @param {string} address_hash Address hash
      * @param {number} id integer id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getNftInstance: async (
-      addressHash: string,
+      address_hash: string,
       id: number,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'addressHash' is not null or undefined
-      if (addressHash === null || addressHash === undefined) {
+      // verify required parameter 'address_hash' is not null or undefined
+      if (address_hash === null || address_hash === undefined) {
         throw new RequiredError(
-          'addressHash',
-          'Required parameter addressHash was null or undefined when calling getNftInstance.',
+          'address_hash',
+          'Required parameter address_hash was null or undefined when calling getNftInstance.',
         )
       }
       // verify required parameter 'id' is not null or undefined
@@ -1395,7 +1395,10 @@ export const DefaultApiAxiosParamCreator = function (
         )
       }
       const localVarPath = `/tokens/{address_hash}/instances/{id}`
-        .replace(`{${'address_hash'}}`, encodeURIComponent(String(addressHash)))
+        .replace(
+          `{${'address_hash'}}`,
+          encodeURIComponent(String(address_hash)),
+        )
         .replace(`{${'id'}}`, encodeURIComponent(String(id)))
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -1436,21 +1439,21 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get transfers of NFT instance
-     * @param {string} addressHash Address hash
+     * @param {string} address_hash Address hash
      * @param {number} id integer id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getNftInstanceTransfers: async (
-      addressHash: string,
+      address_hash: string,
       id: number,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'addressHash' is not null or undefined
-      if (addressHash === null || addressHash === undefined) {
+      // verify required parameter 'address_hash' is not null or undefined
+      if (address_hash === null || address_hash === undefined) {
         throw new RequiredError(
-          'addressHash',
-          'Required parameter addressHash was null or undefined when calling getNftInstanceTransfers.',
+          'address_hash',
+          'Required parameter address_hash was null or undefined when calling getNftInstanceTransfers.',
         )
       }
       // verify required parameter 'id' is not null or undefined
@@ -1461,7 +1464,10 @@ export const DefaultApiAxiosParamCreator = function (
         )
       }
       const localVarPath = `/tokens/{address_hash}/instances/{id}/transfers`
-        .replace(`{${'address_hash'}}`, encodeURIComponent(String(addressHash)))
+        .replace(
+          `{${'address_hash'}}`,
+          encodeURIComponent(String(address_hash)),
+        )
         .replace(`{${'id'}}`, encodeURIComponent(String(id)))
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -1502,21 +1508,21 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get transfers count of NFT instance
-     * @param {string} addressHash Address hash
+     * @param {string} address_hash Address hash
      * @param {number} id integer id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getNftInstanceTransfersCount: async (
-      addressHash: string,
+      address_hash: string,
       id: number,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'addressHash' is not null or undefined
-      if (addressHash === null || addressHash === undefined) {
+      // verify required parameter 'address_hash' is not null or undefined
+      if (address_hash === null || address_hash === undefined) {
         throw new RequiredError(
-          'addressHash',
-          'Required parameter addressHash was null or undefined when calling getNftInstanceTransfersCount.',
+          'address_hash',
+          'Required parameter address_hash was null or undefined when calling getNftInstanceTransfersCount.',
         )
       }
       // verify required parameter 'id' is not null or undefined
@@ -1530,7 +1536,7 @@ export const DefaultApiAxiosParamCreator = function (
         `/tokens/{address_hash}/instances/{id}/transfers-count`
           .replace(
             `{${'address_hash'}}`,
-            encodeURIComponent(String(addressHash)),
+            encodeURIComponent(String(address_hash)),
           )
           .replace(`{${'id'}}`, encodeURIComponent(String(id)))
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -1572,24 +1578,24 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get NFT instances
-     * @param {string} addressHash Address hash
+     * @param {string} address_hash Address hash
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getNftInstances: async (
-      addressHash: string,
+      address_hash: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'addressHash' is not null or undefined
-      if (addressHash === null || addressHash === undefined) {
+      // verify required parameter 'address_hash' is not null or undefined
+      if (address_hash === null || address_hash === undefined) {
         throw new RequiredError(
-          'addressHash',
-          'Required parameter addressHash was null or undefined when calling getNftInstances.',
+          'address_hash',
+          'Required parameter address_hash was null or undefined when calling getNftInstances.',
         )
       }
       const localVarPath = `/tokens/{address_hash}/instances`.replace(
         `{${'address_hash'}}`,
-        encodeURIComponent(String(addressHash)),
+        encodeURIComponent(String(address_hash)),
       )
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -1630,24 +1636,24 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get raw trace
-     * @param {string} transactionHash Transaction hash
+     * @param {string} transaction_hash Transaction hash
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getRawTrace: async (
-      transactionHash: string,
+      transaction_hash: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'transactionHash' is not null or undefined
-      if (transactionHash === null || transactionHash === undefined) {
+      // verify required parameter 'transaction_hash' is not null or undefined
+      if (transaction_hash === null || transaction_hash === undefined) {
         throw new RequiredError(
-          'transactionHash',
-          'Required parameter transactionHash was null or undefined when calling getRawTrace.',
+          'transaction_hash',
+          'Required parameter transaction_hash was null or undefined when calling getRawTrace.',
         )
       }
       const localVarPath = `/transactions/{transaction_hash}/raw-trace`.replace(
         `{${'transaction_hash'}}`,
-        encodeURIComponent(String(transactionHash)),
+        encodeURIComponent(String(transaction_hash)),
       )
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -1688,29 +1694,29 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get read methods
-     * @param {string} addressHash Address hash
+     * @param {string} address_hash Address hash
      * @param {string} [isCustomAbi]
      * @param {string} [from]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getReadMethods: async (
-      addressHash: string,
+      address_hash: string,
       isCustomAbi?: string,
       from?: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'addressHash' is not null or undefined
-      if (addressHash === null || addressHash === undefined) {
+      // verify required parameter 'address_hash' is not null or undefined
+      if (address_hash === null || address_hash === undefined) {
         throw new RequiredError(
-          'addressHash',
-          'Required parameter addressHash was null or undefined when calling getReadMethods.',
+          'address_hash',
+          'Required parameter address_hash was null or undefined when calling getReadMethods.',
         )
       }
       const localVarPath =
         `/smart-contracts/{address_hash}/methods-read`.replace(
           `{${'address_hash'}}`,
-          encodeURIComponent(String(addressHash)),
+          encodeURIComponent(String(address_hash)),
         )
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -1759,29 +1765,29 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get read methods proxy
-     * @param {string} addressHash Address hash
+     * @param {string} address_hash Address hash
      * @param {string} [isCustomAbi]
      * @param {string} [from]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getReadMethodsProxy: async (
-      addressHash: string,
+      address_hash: string,
       isCustomAbi?: string,
       from?: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'addressHash' is not null or undefined
-      if (addressHash === null || addressHash === undefined) {
+      // verify required parameter 'address_hash' is not null or undefined
+      if (address_hash === null || address_hash === undefined) {
         throw new RequiredError(
-          'addressHash',
-          'Required parameter addressHash was null or undefined when calling getReadMethodsProxy.',
+          'address_hash',
+          'Required parameter address_hash was null or undefined when calling getReadMethodsProxy.',
         )
       }
       const localVarPath =
         `/smart-contracts/{address_hash}/methods-read-proxy`.replace(
           `{${'address_hash'}}`,
-          encodeURIComponent(String(addressHash)),
+          encodeURIComponent(String(address_hash)),
         )
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -1830,24 +1836,24 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get smart contract
-     * @param {string} addressHash Address hash
+     * @param {string} address_hash Address hash
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getSmartContract: async (
-      addressHash: string,
+      address_hash: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'addressHash' is not null or undefined
-      if (addressHash === null || addressHash === undefined) {
+      // verify required parameter 'address_hash' is not null or undefined
+      if (address_hash === null || address_hash === undefined) {
         throw new RequiredError(
-          'addressHash',
-          'Required parameter addressHash was null or undefined when calling getSmartContract.',
+          'address_hash',
+          'Required parameter address_hash was null or undefined when calling getSmartContract.',
         )
       }
       const localVarPath = `/smart-contracts/{address_hash}`.replace(
         `{${'address_hash'}}`,
-        encodeURIComponent(String(addressHash)),
+        encodeURIComponent(String(address_hash)),
       )
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -1992,25 +1998,25 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get state changes
-     * @param {string} transactionHash Transaction hash
+     * @param {string} transaction_hash Transaction hash
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getStateChanges: async (
-      transactionHash: string,
+      transaction_hash: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'transactionHash' is not null or undefined
-      if (transactionHash === null || transactionHash === undefined) {
+      // verify required parameter 'transaction_hash' is not null or undefined
+      if (transaction_hash === null || transaction_hash === undefined) {
         throw new RequiredError(
-          'transactionHash',
-          'Required parameter transactionHash was null or undefined when calling getStateChanges.',
+          'transaction_hash',
+          'Required parameter transaction_hash was null or undefined when calling getStateChanges.',
         )
       }
       const localVarPath =
         `/transactions/{transaction_hash}/state-changes`.replace(
           `{${'transaction_hash'}}`,
-          encodeURIComponent(String(transactionHash)),
+          encodeURIComponent(String(transaction_hash)),
         )
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -2097,24 +2103,24 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get token info
-     * @param {string} addressHash Address hash
+     * @param {string} address_hash Address hash
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getToken: async (
-      addressHash: string,
+      address_hash: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'addressHash' is not null or undefined
-      if (addressHash === null || addressHash === undefined) {
+      // verify required parameter 'address_hash' is not null or undefined
+      if (address_hash === null || address_hash === undefined) {
         throw new RequiredError(
-          'addressHash',
-          'Required parameter addressHash was null or undefined when calling getToken.',
+          'address_hash',
+          'Required parameter address_hash was null or undefined when calling getToken.',
         )
       }
       const localVarPath = `/tokens/{address_hash}`.replace(
         `{${'address_hash'}}`,
-        encodeURIComponent(String(addressHash)),
+        encodeURIComponent(String(address_hash)),
       )
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -2155,24 +2161,24 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get token holders
-     * @param {string} addressHash Address hash
+     * @param {string} address_hash Address hash
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getTokenCounters: async (
-      addressHash: string,
+      address_hash: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'addressHash' is not null or undefined
-      if (addressHash === null || addressHash === undefined) {
+      // verify required parameter 'address_hash' is not null or undefined
+      if (address_hash === null || address_hash === undefined) {
         throw new RequiredError(
-          'addressHash',
-          'Required parameter addressHash was null or undefined when calling getTokenCounters.',
+          'address_hash',
+          'Required parameter address_hash was null or undefined when calling getTokenCounters.',
         )
       }
       const localVarPath = `/tokens/{address_hash}/counters`.replace(
         `{${'address_hash'}}`,
-        encodeURIComponent(String(addressHash)),
+        encodeURIComponent(String(address_hash)),
       )
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -2213,24 +2219,24 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get token holders
-     * @param {string} addressHash Address hash
+     * @param {string} address_hash Address hash
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getTokenHolders: async (
-      addressHash: string,
+      address_hash: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'addressHash' is not null or undefined
-      if (addressHash === null || addressHash === undefined) {
+      // verify required parameter 'address_hash' is not null or undefined
+      if (address_hash === null || address_hash === undefined) {
         throw new RequiredError(
-          'addressHash',
-          'Required parameter addressHash was null or undefined when calling getTokenHolders.',
+          'address_hash',
+          'Required parameter address_hash was null or undefined when calling getTokenHolders.',
         )
       }
       const localVarPath = `/tokens/{address_hash}/holders`.replace(
         `{${'address_hash'}}`,
-        encodeURIComponent(String(addressHash)),
+        encodeURIComponent(String(address_hash)),
       )
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -2271,21 +2277,21 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get token instance holders
-     * @param {string} addressHash Address hash
+     * @param {string} address_hash Address hash
      * @param {number} id integer id
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getTokenInstanceHolders: async (
-      addressHash: string,
+      address_hash: string,
       id: number,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'addressHash' is not null or undefined
-      if (addressHash === null || addressHash === undefined) {
+      // verify required parameter 'address_hash' is not null or undefined
+      if (address_hash === null || address_hash === undefined) {
         throw new RequiredError(
-          'addressHash',
-          'Required parameter addressHash was null or undefined when calling getTokenInstanceHolders.',
+          'address_hash',
+          'Required parameter address_hash was null or undefined when calling getTokenInstanceHolders.',
         )
       }
       // verify required parameter 'id' is not null or undefined
@@ -2296,7 +2302,10 @@ export const DefaultApiAxiosParamCreator = function (
         )
       }
       const localVarPath = `/tokens/{address_hash}/instances/{id}/holders`
-        .replace(`{${'address_hash'}}`, encodeURIComponent(String(addressHash)))
+        .replace(
+          `{${'address_hash'}}`,
+          encodeURIComponent(String(address_hash)),
+        )
         .replace(`{${'id'}}`, encodeURIComponent(String(id)))
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -2337,24 +2346,24 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get token token transfers
-     * @param {string} addressHash Address hash
+     * @param {string} address_hash Address hash
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getTokenTokenTransfers: async (
-      addressHash: string,
+      address_hash: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'addressHash' is not null or undefined
-      if (addressHash === null || addressHash === undefined) {
+      // verify required parameter 'address_hash' is not null or undefined
+      if (address_hash === null || address_hash === undefined) {
         throw new RequiredError(
-          'addressHash',
-          'Required parameter addressHash was null or undefined when calling getTokenTokenTransfers.',
+          'address_hash',
+          'Required parameter address_hash was null or undefined when calling getTokenTokenTransfers.',
         )
       }
       const localVarPath = `/tokens/{address_hash}/transfers`.replace(
         `{${'address_hash'}}`,
-        encodeURIComponent(String(addressHash)),
+        encodeURIComponent(String(address_hash)),
       )
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -2395,27 +2404,27 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get token transfers
-     * @param {string} transactionHash Transaction hash
+     * @param {string} transaction_hash Transaction hash
      * @param {string} [type]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getTokenTransfers: async (
-      transactionHash: string,
+      transaction_hash: string,
       type?: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'transactionHash' is not null or undefined
-      if (transactionHash === null || transactionHash === undefined) {
+      // verify required parameter 'transaction_hash' is not null or undefined
+      if (transaction_hash === null || transaction_hash === undefined) {
         throw new RequiredError(
-          'transactionHash',
-          'Required parameter transactionHash was null or undefined when calling getTokenTransfers.',
+          'transaction_hash',
+          'Required parameter transaction_hash was null or undefined when calling getTokenTransfers.',
         )
       }
       const localVarPath =
         `/transactions/{transaction_hash}/token-transfers`.replace(
           `{${'transaction_hash'}}`,
-          encodeURIComponent(String(transactionHash)),
+          encodeURIComponent(String(transaction_hash)),
         )
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -2518,24 +2527,24 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get tx info
-     * @param {string} transactionHash Transaction hash
+     * @param {string} transaction_hash Transaction hash
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getTx: async (
-      transactionHash: string,
+      transaction_hash: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'transactionHash' is not null or undefined
-      if (transactionHash === null || transactionHash === undefined) {
+      // verify required parameter 'transaction_hash' is not null or undefined
+      if (transaction_hash === null || transaction_hash === undefined) {
         throw new RequiredError(
-          'transactionHash',
-          'Required parameter transactionHash was null or undefined when calling getTx.',
+          'transaction_hash',
+          'Required parameter transaction_hash was null or undefined when calling getTx.',
         )
       }
       const localVarPath = `/transactions/{transaction_hash}`.replace(
         `{${'transaction_hash'}}`,
-        encodeURIComponent(String(transactionHash)),
+        encodeURIComponent(String(transaction_hash)),
       )
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -2732,27 +2741,27 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get write methods
-     * @param {string} addressHash Address hash
+     * @param {string} address_hash Address hash
      * @param {string} [isCustomAbi]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getWriteMethods: async (
-      addressHash: string,
+      address_hash: string,
       isCustomAbi?: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'addressHash' is not null or undefined
-      if (addressHash === null || addressHash === undefined) {
+      // verify required parameter 'address_hash' is not null or undefined
+      if (address_hash === null || address_hash === undefined) {
         throw new RequiredError(
-          'addressHash',
-          'Required parameter addressHash was null or undefined when calling getWriteMethods.',
+          'address_hash',
+          'Required parameter address_hash was null or undefined when calling getWriteMethods.',
         )
       }
       const localVarPath =
         `/smart-contracts/{address_hash}/methods-write`.replace(
           `{${'address_hash'}}`,
-          encodeURIComponent(String(addressHash)),
+          encodeURIComponent(String(address_hash)),
         )
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -2797,27 +2806,27 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary get write methods proxy
-     * @param {string} addressHash Address hash
+     * @param {string} address_hash Address hash
      * @param {string} [isCustomAbi]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     getWriteMethodsProxy: async (
-      addressHash: string,
+      address_hash: string,
       isCustomAbi?: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
-      // verify required parameter 'addressHash' is not null or undefined
-      if (addressHash === null || addressHash === undefined) {
+      // verify required parameter 'address_hash' is not null or undefined
+      if (address_hash === null || address_hash === undefined) {
         throw new RequiredError(
-          'addressHash',
-          'Required parameter addressHash was null or undefined when calling getWriteMethodsProxy.',
+          'address_hash',
+          'Required parameter address_hash was null or undefined when calling getWriteMethodsProxy.',
         )
       }
       const localVarPath =
         `/smart-contracts/{address_hash}/methods-write-proxy`.replace(
           `{${'address_hash'}}`,
-          encodeURIComponent(String(addressHash)),
+          encodeURIComponent(String(address_hash)),
         )
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')
@@ -2863,13 +2872,13 @@ export const DefaultApiAxiosParamCreator = function (
      *
      * @summary query read method
      * @param {ReadMethodQueryBody} body
-     * @param {string} addressHash Address hash
+     * @param {string} address_hash Address hash
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
     queryReadMethod: async (
       body: ReadMethodQueryBody,
-      addressHash: string,
+      address_hash: string,
       options: AxiosRequestConfig = {},
     ): Promise<RequestArgs> => {
       // verify required parameter 'body' is not null or undefined
@@ -2879,17 +2888,17 @@ export const DefaultApiAxiosParamCreator = function (
           'Required parameter body was null or undefined when calling queryReadMethod.',
         )
       }
-      // verify required parameter 'addressHash' is not null or undefined
-      if (addressHash === null || addressHash === undefined) {
+      // verify required parameter 'address_hash' is not null or undefined
+      if (address_hash === null || address_hash === undefined) {
         throw new RequiredError(
-          'addressHash',
-          'Required parameter addressHash was null or undefined when calling queryReadMethod.',
+          'address_hash',
+          'Required parameter address_hash was null or undefined when calling queryReadMethod.',
         )
       }
       const localVarPath =
         `/smart-contracts/{address_hash}/query-read-method`.replace(
           `{${'address_hash'}}`,
-          encodeURIComponent(String(addressHash)),
+          encodeURIComponent(String(address_hash)),
         )
       // use dummy base URL string because the URL constructor only accepts absolute URLs.
       const localVarUrlObj = new URL(localVarPath, 'https://example.com')

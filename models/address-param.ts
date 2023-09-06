@@ -17,7 +17,7 @@ export interface AddressParam {
    * @type {string}
    * @memberof AddressParam
    */
-  implementationName: string
+  implementation_name: string
   /**
    *
    * @type {string}
@@ -29,29 +29,29 @@ export interface AddressParam {
    * @type {boolean}
    * @memberof AddressParam
    */
-  isContract: boolean
+  is_contract: boolean
   /**
    *
    * @type {Array<AddressTag>}
    * @memberof AddressParam
    */
-  privateTags: Array<AddressTag>
+  private_tags: Array<AddressTag>
   /**
    *
    * @type {Array<WatchlistName>}
    * @memberof AddressParam
    */
-  watchlistNames: Array<WatchlistName>
+  watchlist_names: Array<WatchlistName>
   /**
    *
    * @type {Array<AddressTag>}
    * @memberof AddressParam
    */
-  publicTags: Array<AddressTag>
+  public_tags: Array<AddressTag>
   /**
    *
    * @type {boolean}
    * @memberof AddressParam
    */
-  isVerified: boolean
+  is_verified: boolean
 }

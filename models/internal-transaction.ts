@@ -16,7 +16,7 @@ export interface InternalTransaction {
    * @type {AddressParam}
    * @memberof InternalTransaction
    */
-  createdContract: AddressParam
+  created_contract: AddressParam
   /**
    *
    * @type {string}
@@ -34,7 +34,7 @@ export interface InternalTransaction {
    * @type {string}
    * @memberof InternalTransaction
    */
-  gasLimit: string
+  gas_limit: string
   /**
    *
    * @type {number}
@@ -64,7 +64,7 @@ export interface InternalTransaction {
    * @type {string}
    * @memberof InternalTransaction
    */
-  transactionHash: string
+  transaction_hash: string
   /**
    *
    * @type {string}

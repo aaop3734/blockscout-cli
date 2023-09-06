@@ -15,5 +15,5 @@ export interface TransactionChartItem {
    * @type {number}
    * @memberof TransactionChartItem
    */
-  txCount: number
+  tx_count: number
 }

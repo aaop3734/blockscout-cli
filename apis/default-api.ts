@@ -1,7 +1,7 @@
 import type { AxiosRequestConfig, AxiosResponse } from 'axios'
 
 import { BaseAPI } from '../base'
-import { DefaultApiFp } from './funcionnal-programing-interface'
+import { DefaultApiFp } from './functional-programing-interface'
 
 import {
   Address,
@@ -9,41 +9,12 @@ import {
   Block,
   CoinBalanceHistoryByDaysEntry,
   IndexingStatus,
-  InlineResponse200,
-  InlineResponse2001,
-  InlineResponse20010,
-  InlineResponse20011,
-  InlineResponse20012,
-  InlineResponse20013,
-  InlineResponse20014,
-  InlineResponse20015,
-  InlineResponse20016,
-  InlineResponse20017,
-  InlineResponse20018,
-  InlineResponse20019,
-  InlineResponse2002,
-  InlineResponse20020,
-  InlineResponse20021,
-  InlineResponse20022,
-  InlineResponse20023,
-  InlineResponse20024,
-  InlineResponse20025,
-  InlineResponse20026,
-  InlineResponse20027,
-  InlineResponse2003,
-  InlineResponse2004,
-  InlineResponse2005,
-  InlineResponse2006,
-  InlineResponse2007,
-  InlineResponse2008,
-  InlineResponse2009,
   NFTInstance,
   RawTrace,
   ReadMethodQueryBody,
   ReadMethodResponse,
   ReadMethodWithoutValue,
   ReadMethodWithValue,
-  SearchResultRedirect,
   SmartContract,
   StatsResponse,
   TokenBalance,
@@ -52,6 +23,34 @@ import {
   Transaction,
   WriteMethod,
 } from '../models'
+
+import {
+  AddressWithTxCountResult,
+  BlockResult,
+  CoinBalanceHistoryEntryResult,
+  HolderResult,
+  InternalTransactionResult,
+  JsonRpcUrlResult,
+  LogResult,
+  MarketChartResult,
+  NewSmartContract24hResult,
+  NftInstanceResult,
+  SearchResult,
+  SearchResultAddressOrContract,
+  SearchResultBlock,
+  SearchResultRedirect,
+  SearchResultToken,
+  SearchResultTransaction,
+  SmartContractsForListResult,
+  StateChangeResult,
+  TokenBalanceResult,
+  TokenInfoResult,
+  TokenTransferResult,
+  TransactionChartResult,
+  TransactionResult,
+  TransferCountResult,
+  WithdrawalResult,
+} from '../results'
 
 /**
  * DefaultApi - object-oriented interface
@@ -63,137 +62,145 @@ export class DefaultApi extends BaseAPI {
   /**
    *
    * @summary get address info
-   * @param {string} addressHash Address hash
+   * @param {string} address_hash Address hash
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async getAddress(
-    addressHash: string,
+    address_hash: string,
     options?: AxiosRequestConfig,
   ): Promise<AxiosResponse<Address>> {
     return DefaultApiFp(this.configuration)
-      .getAddress(addressHash, options)
+      .getAddress(address_hash, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get blocks validated by address
-   * @param {string} addressHash Address hash
+   * @param {string} address_hash Address hash
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async getAddressBlocksValidated(
-    addressHash: string,
+    address_hash: string,
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse20015>> {
+  ): Promise<AxiosResponse<BlockResult>> {
     return DefaultApiFp(this.configuration)
-      .getAddressBlocksValidated(addressHash, options)
+      .getAddressBlocksValidated(address_hash, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get address coin balance history
-   * @param {string} addressHash Address hash
+   * @param {string} address_hash Address hash
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async getAddressCoinBalanceHistory(
-    addressHash: string,
+    address_hash: string,
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse20017>> {
+  ): Promise<AxiosResponse<CoinBalanceHistoryEntryResult>> {
     return DefaultApiFp(this.configuration)
-      .getAddressCoinBalanceHistory(addressHash, options)
+      .getAddressCoinBalanceHistory(address_hash, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get address coin balance history by day
-   * @param {string} addressHash Address hash
+   * @param {string} address_hash Address hash
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async getAddressCoinBalanceHistoryByDay(
-    addressHash: string,
+    address_hash: string,
     options?: AxiosRequestConfig,
   ): Promise<AxiosResponse<Array<CoinBalanceHistoryByDaysEntry>>> {
     return DefaultApiFp(this.configuration)
-      .getAddressCoinBalanceHistoryByDay(addressHash, options)
+      .getAddressCoinBalanceHistoryByDay(address_hash, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get address counters
-   * @param {string} addressHash Address hash
+   * @param {string} address_hash Address hash
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async getAddressCounters(
-    addressHash: string,
+    address_hash: string,
     options?: AxiosRequestConfig,
   ): Promise<AxiosResponse<AddressCounters>> {
     return DefaultApiFp(this.configuration)
-      .getAddressCounters(addressHash, options)
+      .getAddressCounters(address_hash, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get address internal txs
-   * @param {string} addressHash Address hash
+   * @param {string} address_hash Address hash
    * @param {string} [filter]
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async getAddressInternalTxs(
-    addressHash: string,
+    address_hash: string,
     filter?: string,
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse20013>> {
+  ): Promise<AxiosResponse<InternalTransactionResult>> {
     return DefaultApiFp(this.configuration)
-      .getAddressInternalTxs(addressHash, filter, options)
+      .getAddressInternalTxs(address_hash, filter, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get address logs
-   * @param {string} addressHash Address hash
+   * @param {string} address_hash Address hash
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async getAddressLogs(
-    addressHash: string,
+    address_hash: string,
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse20014>> {
+  ): Promise<AxiosResponse<LogResult>> {
     return DefaultApiFp(this.configuration)
-      .getAddressLogs(addressHash, options)
+      .getAddressLogs(address_hash, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get blocks validated by address
-   * @param {string} addressHash Address hash
+   * @param {string} address_hash Address hash
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async getAddressTokenBalances(
-    addressHash: string,
+    address_hash: string,
     options?: AxiosRequestConfig,
   ): Promise<AxiosResponse<Array<TokenBalance>>> {
     return DefaultApiFp(this.configuration)
-      .getAddressTokenBalances(addressHash, options)
+      .getAddressTokenBalances(address_hash, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get address token transfers
-   * @param {string} addressHash Address hash
+   * @param {string} address_hash Address hash
    * @param {string} [type]
    * @param {string} [filter]
    * @param {string} [token]
@@ -202,68 +209,72 @@ export class DefaultApi extends BaseAPI {
    * @memberof DefaultApi
    */
   public async getAddressTokenTransfers(
-    addressHash: string,
+    address_hash: string,
     type?: string,
     filter?: string,
     token?: string,
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse20012>> {
+  ): Promise<AxiosResponse<TokenTransferResult>> {
     return DefaultApiFp(this.configuration)
-      .getAddressTokenTransfers(addressHash, type, filter, token, options)
+      .getAddressTokenTransfers(address_hash, type, filter, token, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get blocks validated by address
-   * @param {string} addressHash Address hash
+   * @param {string} address_hash Address hash
    * @param {string} [type]
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async getAddressTokens(
-    addressHash: string,
+    address_hash: string,
     type?: string,
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse20016>> {
+  ): Promise<AxiosResponse<TokenBalanceResult>> {
     return DefaultApiFp(this.configuration)
-      .getAddressTokens(addressHash, type, options)
+      .getAddressTokens(address_hash, type, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get address txs
-   * @param {string} addressHash Address hash
+   * @param {string} address_hash Address hash
    * @param {string} [filter]
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async getAddressTxs(
-    addressHash: string,
+    address_hash: string,
     filter?: string,
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse2009>> {
+  ): Promise<AxiosResponse<TransactionResult>> {
     return DefaultApiFp(this.configuration)
-      .getAddressTxs(addressHash, filter, options)
+      .getAddressTxs(address_hash, filter, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get address withdrawals
-   * @param {string} addressHash Address hash
+   * @param {string} address_hash Address hash
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async getAddressWithdrawals(
-    addressHash: string,
+    address_hash: string,
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse20010>> {
+  ): Promise<AxiosResponse<WithdrawalResult>> {
     return DefaultApiFp(this.configuration)
-      .getAddressWithdrawals(addressHash, options)
+      .getAddressWithdrawals(address_hash, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get native coin holders list
@@ -273,11 +284,12 @@ export class DefaultApi extends BaseAPI {
    */
   public async getAddresses(
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse20011>> {
+  ): Promise<AxiosResponse<AddressWithTxCountResult>> {
     return DefaultApiFp(this.configuration)
       .getAddresses(options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get block info
@@ -294,6 +306,7 @@ export class DefaultApi extends BaseAPI {
       .getBlock(blockNumberOrHash, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get block txs
@@ -305,11 +318,12 @@ export class DefaultApi extends BaseAPI {
   public async getBlockTxs(
     blockNumberOrHash: string,
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse2009>> {
+  ): Promise<AxiosResponse<TransactionResult>> {
     return DefaultApiFp(this.configuration)
       .getBlockTxs(blockNumberOrHash, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get block withdrawals
@@ -321,11 +335,12 @@ export class DefaultApi extends BaseAPI {
   public async getBlockWithdrawals(
     blockNumberOrHash: string,
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse20010>> {
+  ): Promise<AxiosResponse<WithdrawalResult>> {
     return DefaultApiFp(this.configuration)
       .getBlockWithdrawals(blockNumberOrHash, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get blocks
@@ -337,11 +352,12 @@ export class DefaultApi extends BaseAPI {
   public async getBlocks(
     type?: string,
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse2002>> {
+  ): Promise<AxiosResponse<BlockResult>> {
     return DefaultApiFp(this.configuration)
       .getBlocks(type, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get indexing status
@@ -356,22 +372,24 @@ export class DefaultApi extends BaseAPI {
       .getIndexingStatus(options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get internal txs
-   * @param {string} transactionHash Transaction hash
+   * @param {string} transaction_hash Transaction hash
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async getInternalTxs(
-    transactionHash: string,
+    transaction_hash: string,
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse2006>> {
+  ): Promise<AxiosResponse<InternalTransactionResult>> {
     return DefaultApiFp(this.configuration)
-      .getInternalTxs(transactionHash, options)
+      .getInternalTxs(transaction_hash, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get json rpc url
@@ -381,27 +399,29 @@ export class DefaultApi extends BaseAPI {
    */
   public async getJsonRpcUrl(
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse20027>> {
+  ): Promise<AxiosResponse<JsonRpcUrlResult>> {
     return DefaultApiFp(this.configuration)
       .getJsonRpcUrl(options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get logs
-   * @param {string} transactionHash Transaction hash
+   * @param {string} transaction_hash Transaction hash
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async getLogs(
-    transactionHash: string,
+    transaction_hash: string,
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse2007>> {
+  ): Promise<AxiosResponse<LogResult>> {
     return DefaultApiFp(this.configuration)
-      .getLogs(transactionHash, options)
+      .getLogs(transaction_hash, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get main page blocks
@@ -416,6 +436,7 @@ export class DefaultApi extends BaseAPI {
       .getMainPageTokens(options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get main page txs
@@ -430,6 +451,7 @@ export class DefaultApi extends BaseAPI {
       .getMainPageTxs(options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get market chart
@@ -439,101 +461,107 @@ export class DefaultApi extends BaseAPI {
    */
   public async getMarketChart(
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse2004>> {
+  ): Promise<AxiosResponse<MarketChartResult>> {
     return DefaultApiFp(this.configuration)
       .getMarketChart(options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get NFT instance by id
-   * @param {string} addressHash Address hash
+   * @param {string} address_hash Address hash
    * @param {number} id integer id
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async getNftInstance(
-    addressHash: string,
+    address_hash: string,
     id: number,
     options?: AxiosRequestConfig,
   ): Promise<AxiosResponse<NFTInstance>> {
     return DefaultApiFp(this.configuration)
-      .getNftInstance(addressHash, id, options)
+      .getNftInstance(address_hash, id, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get transfers of NFT instance
-   * @param {string} addressHash Address hash
+   * @param {string} address_hash Address hash
    * @param {number} id integer id
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async getNftInstanceTransfers(
-    addressHash: string,
+    address_hash: string,
     id: number,
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse20022>> {
+  ): Promise<AxiosResponse<TokenTransferResult>> {
     return DefaultApiFp(this.configuration)
-      .getNftInstanceTransfers(addressHash, id, options)
+      .getNftInstanceTransfers(address_hash, id, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get transfers count of NFT instance
-   * @param {string} addressHash Address hash
+   * @param {string} address_hash Address hash
    * @param {number} id integer id
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async getNftInstanceTransfersCount(
-    addressHash: string,
+    address_hash: string,
     id: number,
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse20024>> {
+  ): Promise<AxiosResponse<TransferCountResult>> {
     return DefaultApiFp(this.configuration)
-      .getNftInstanceTransfersCount(addressHash, id, options)
+      .getNftInstanceTransfersCount(address_hash, id, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get NFT instances
-   * @param {string} addressHash Address hash
+   * @param {string} address_hash Address hash
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async getNftInstances(
-    addressHash: string,
+    address_hash: string,
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse20021>> {
+  ): Promise<AxiosResponse<NftInstanceResult>> {
     return DefaultApiFp(this.configuration)
-      .getNftInstances(addressHash, options)
+      .getNftInstances(address_hash, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get raw trace
-   * @param {string} transactionHash Transaction hash
+   * @param {string} transaction_hash Transaction hash
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async getRawTrace(
-    transactionHash: string,
+    transaction_hash: string,
     options?: AxiosRequestConfig,
   ): Promise<AxiosResponse<Array<RawTrace>>> {
     return DefaultApiFp(this.configuration)
-      .getRawTrace(transactionHash, options)
+      .getRawTrace(transaction_hash, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get read methods
-   * @param {string} addressHash Address hash
+   * @param {string} address_hash Address hash
    * @param {string} [isCustomAbi]
    * @param {string} [from]
    * @param {*} [options] Override http request option.
@@ -541,7 +569,7 @@ export class DefaultApi extends BaseAPI {
    * @memberof DefaultApi
    */
   public async getReadMethods(
-    addressHash: string,
+    address_hash: string,
     isCustomAbi?: string,
     from?: string,
     options?: AxiosRequestConfig,
@@ -549,13 +577,14 @@ export class DefaultApi extends BaseAPI {
     AxiosResponse<Array<ReadMethodWithValue | ReadMethodWithoutValue>>
   > {
     return DefaultApiFp(this.configuration)
-      .getReadMethods(addressHash, isCustomAbi, from, options)
+      .getReadMethods(address_hash, isCustomAbi, from, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get read methods proxy
-   * @param {string} addressHash Address hash
+   * @param {string} address_hash Address hash
    * @param {string} [isCustomAbi]
    * @param {string} [from]
    * @param {*} [options] Override http request option.
@@ -563,7 +592,7 @@ export class DefaultApi extends BaseAPI {
    * @memberof DefaultApi
    */
   public async getReadMethodsProxy(
-    addressHash: string,
+    address_hash: string,
     isCustomAbi?: string,
     from?: string,
     options?: AxiosRequestConfig,
@@ -571,25 +600,27 @@ export class DefaultApi extends BaseAPI {
     AxiosResponse<Array<ReadMethodWithValue | ReadMethodWithoutValue>>
   > {
     return DefaultApiFp(this.configuration)
-      .getReadMethodsProxy(addressHash, isCustomAbi, from, options)
+      .getReadMethodsProxy(address_hash, isCustomAbi, from, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get smart contract
-   * @param {string} addressHash Address hash
+   * @param {string} address_hash Address hash
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async getSmartContract(
-    addressHash: string,
+    address_hash: string,
     options?: AxiosRequestConfig,
   ): Promise<AxiosResponse<SmartContract>> {
     return DefaultApiFp(this.configuration)
-      .getSmartContract(addressHash, options)
+      .getSmartContract(address_hash, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get verified smart contracts
@@ -603,11 +634,12 @@ export class DefaultApi extends BaseAPI {
     q?: string,
     filter?: string,
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse20025>> {
+  ): Promise<AxiosResponse<SmartContractsForListResult>> {
     return DefaultApiFp(this.configuration)
       .getSmartContracts(q, filter, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get verified smart contracts counters
@@ -617,27 +649,29 @@ export class DefaultApi extends BaseAPI {
    */
   public async getSmartContractsCounters(
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse20026>> {
+  ): Promise<AxiosResponse<NewSmartContract24hResult>> {
     return DefaultApiFp(this.configuration)
       .getSmartContractsCounters(options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get state changes
-   * @param {string} transactionHash Transaction hash
+   * @param {string} transaction_hash Transaction hash
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async getStateChanges(
-    transactionHash: string,
+    transaction_hash: string,
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse2008>> {
+  ): Promise<AxiosResponse<StateChangeResult>> {
     return DefaultApiFp(this.configuration)
-      .getStateChanges(transactionHash, options)
+      .getStateChanges(transaction_hash, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get stats counters
@@ -652,106 +686,113 @@ export class DefaultApi extends BaseAPI {
       .getStats(options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get token info
-   * @param {string} addressHash Address hash
+   * @param {string} address_hash Address hash
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async getToken(
-    addressHash: string,
+    address_hash: string,
     options?: AxiosRequestConfig,
   ): Promise<AxiosResponse<TokenInfo>> {
     return DefaultApiFp(this.configuration)
-      .getToken(addressHash, options)
+      .getToken(address_hash, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get token holders
-   * @param {string} addressHash Address hash
+   * @param {string} address_hash Address hash
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async getTokenCounters(
-    addressHash: string,
+    address_hash: string,
     options?: AxiosRequestConfig,
   ): Promise<AxiosResponse<TokenCounters>> {
     return DefaultApiFp(this.configuration)
-      .getTokenCounters(addressHash, options)
+      .getTokenCounters(address_hash, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get token holders
-   * @param {string} addressHash Address hash
+   * @param {string} address_hash Address hash
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async getTokenHolders(
-    addressHash: string,
+    address_hash: string,
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse20020>> {
+  ): Promise<AxiosResponse<HolderResult>> {
     return DefaultApiFp(this.configuration)
-      .getTokenHolders(addressHash, options)
+      .getTokenHolders(address_hash, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get token instance holders
-   * @param {string} addressHash Address hash
+   * @param {string} address_hash Address hash
    * @param {number} id integer id
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async getTokenInstanceHolders(
-    addressHash: string,
+    address_hash: string,
     id: number,
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse20023>> {
+  ): Promise<AxiosResponse<HolderResult>> {
     return DefaultApiFp(this.configuration)
-      .getTokenInstanceHolders(addressHash, id, options)
+      .getTokenInstanceHolders(address_hash, id, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get token token transfers
-   * @param {string} addressHash Address hash
+   * @param {string} address_hash Address hash
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async getTokenTokenTransfers(
-    addressHash: string,
+    address_hash: string,
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse20019>> {
+  ): Promise<AxiosResponse<TokenTransferResult>> {
     return DefaultApiFp(this.configuration)
-      .getTokenTokenTransfers(addressHash, options)
+      .getTokenTokenTransfers(address_hash, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get token transfers
-   * @param {string} transactionHash Transaction hash
+   * @param {string} transaction_hash Transaction hash
    * @param {string} [type]
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async getTokenTransfers(
-    transactionHash: string,
+    transaction_hash: string,
     type?: string,
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse2005>> {
+  ): Promise<AxiosResponse<TokenTransferResult>> {
     return DefaultApiFp(this.configuration)
-      .getTokenTransfers(transactionHash, type, options)
+      .getTokenTransfers(transaction_hash, type, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get tokens list
@@ -765,27 +806,29 @@ export class DefaultApi extends BaseAPI {
     q?: string,
     type?: string,
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse20018>> {
+  ): Promise<AxiosResponse<TokenInfoResult>> {
     return DefaultApiFp(this.configuration)
       .getTokensList(q, type, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get tx info
-   * @param {string} transactionHash Transaction hash
+   * @param {string} transaction_hash Transaction hash
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async getTx(
-    transactionHash: string,
+    transaction_hash: string,
     options?: AxiosRequestConfig,
   ): Promise<AxiosResponse<Transaction>> {
     return DefaultApiFp(this.configuration)
-      .getTx(transactionHash, options)
+      .getTx(transaction_hash, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get txs
@@ -801,11 +844,12 @@ export class DefaultApi extends BaseAPI {
     type?: string,
     method?: string,
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse2001>> {
+  ): Promise<AxiosResponse<TransactionResult>> {
     return DefaultApiFp(this.configuration)
       .getTxs(filter, type, method, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get txs chart
@@ -815,11 +859,12 @@ export class DefaultApi extends BaseAPI {
    */
   public async getTxsChart(
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse2003>> {
+  ): Promise<AxiosResponse<TransactionChartResult>> {
     return DefaultApiFp(this.configuration)
       .getTxsChart(options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get withdrawals
@@ -829,65 +874,69 @@ export class DefaultApi extends BaseAPI {
    */
   public async getWithdrawals(
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse20010>> {
+  ): Promise<AxiosResponse<WithdrawalResult>> {
     return DefaultApiFp(this.configuration)
       .getWithdrawals(options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get write methods
-   * @param {string} addressHash Address hash
+   * @param {string} address_hash Address hash
    * @param {string} [isCustomAbi]
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async getWriteMethods(
-    addressHash: string,
+    address_hash: string,
     isCustomAbi?: string,
     options?: AxiosRequestConfig,
   ): Promise<AxiosResponse<Array<WriteMethod>>> {
     return DefaultApiFp(this.configuration)
-      .getWriteMethods(addressHash, isCustomAbi, options)
+      .getWriteMethods(address_hash, isCustomAbi, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary get write methods proxy
-   * @param {string} addressHash Address hash
+   * @param {string} address_hash Address hash
    * @param {string} [isCustomAbi]
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async getWriteMethodsProxy(
-    addressHash: string,
+    address_hash: string,
     isCustomAbi?: string,
     options?: AxiosRequestConfig,
   ): Promise<AxiosResponse<Array<WriteMethod>>> {
     return DefaultApiFp(this.configuration)
-      .getWriteMethodsProxy(addressHash, isCustomAbi, options)
+      .getWriteMethodsProxy(address_hash, isCustomAbi, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary query read method
    * @param {ReadMethodQueryBody} body
-   * @param {string} addressHash Address hash
+   * @param {string} address_hash Address hash
    * @param {*} [options] Override http request option.
    * @throws {RequiredError}
    * @memberof DefaultApi
    */
   public async queryReadMethod(
     body: ReadMethodQueryBody,
-    addressHash: string,
+    address_hash: string,
     options?: AxiosRequestConfig,
   ): Promise<AxiosResponse<Array<ReadMethodResponse>>> {
     return DefaultApiFp(this.configuration)
-      .queryReadMethod(body, addressHash, options)
+      .queryReadMethod(body, address_hash, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary search
@@ -899,11 +948,12 @@ export class DefaultApi extends BaseAPI {
   public async search(
     q?: string,
     options?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<InlineResponse200>> {
+  ): Promise<AxiosResponse<SearchResult>> {
     return DefaultApiFp(this.configuration)
       .search(q, options)
       .then((request) => request(this.axios, this.basePath))
   }
+
   /**
    *
    * @summary search redirect

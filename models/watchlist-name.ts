@@ -9,7 +9,7 @@ export interface WatchlistName {
    * @type {string}
    * @memberof WatchlistName
    */
-  displayName: string
+  display_name: string
   /**
    *
    * @type {string}
