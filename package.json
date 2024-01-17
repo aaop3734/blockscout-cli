@@ -1,6 +1,6 @@
 {
   "name": "blockscout-cli",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Blockscout Client for any Framework base on NodeJS",
   "author": "@aaop3734",
   "keywords": [
@@ -28,7 +28,7 @@
   ],
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
-  "types": "./dist/esms/index.d.ts",
+  "types": "./dist/esm/index.d.ts",
   "scripts": {
     "build:esm": "swc src -d dist/esm --copy-files --config-file .swcrc.esm.json ",
     "build:cjs": "swc ./src --config-file .swcrc.cjs.json --out-dir dist/cjs",
