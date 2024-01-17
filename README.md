@@ -19,6 +19,8 @@ or
 yarn add blockscout-cli
 ```
 
+# 🚀 Front-end Examples
+
 ## ⚙️ Configuration
 
 In file `blockscout-cli.service.ts`
@@ -64,14 +66,83 @@ function Home() {
 export default Home
 ```
 
+# 🚀 Back-end Examples (With NestJS)
+
+## ⚙️ Configuration
+
+In file `blockscout.service.ts`
+
+```typescript
+import { Injectable } from '@nestjs/common'
+import { Configuration, DefaultApi } from 'blockscout-cli'
+
+@Injectable()
+export class BlockscoutService extends DefaultApi {
+  constructor() {
+    super(
+      new Configuration({
+        basePath: 'https://eth.blockscout.com/api/v2',
+      }),
+    )
+  }
+}
+```
+
+In file `app.module.ts`
+
+```typescript
+import { Global, Module } from '@nestjs/common'
+import { AppController } from './app.controller'
+import { AppService } from './app.service'
+import { BlockscoutService } from './blockscout.service'
+
+@Global()
+@Module({
+  providers: [BlockscoutService],
+  exports: [BlockscoutService],
+})
+export class GlobalModule {}
+
+@Module({
+  imports: [GlobalModule],
+  controllers: [AppController],
+  providers: [AppService],
+})
+export class AppModule {}
+```
+
+## 🔨 Usage
+
+```typescript
+import { Injectable } from '@nestjs/common'
+import { BlockscoutService } from './blockscout.service'
+
+@Injectable()
+export class AppService {
+  constructor(private blockscoutService: BlockscoutService) {}
+
+  async getHomeStarts() {
+    try {
+      const { data } = await this.blockscoutService.getStats()
+
+      console.log(data)
+      return data
+    } catch (e) {
+      console.log(e)
+    }
+  }
+}
+```
+
 ## 🖲️ Roadmap
 
-| Feature                 | Status |
-| ----------------------- | ------ |
-| NextJS + Tanstack Query | ✅     |
-| React + Tanstack Query  | ✅     |
-| NodeJS with ES Modules  | ⚠️     |
-| Typescript Strict       | ⚠️     |
+| Feature                          | Status |
+| -------------------------------- | :----: |
+| NextJS + Tanstack Query          |   ✅   |
+| React + Tanstack Query           |   ✅   |
+| NodeJS with ES Module + CommonJS |  ✅️   |
+| Strict Types Response            |   ✅   |
+| Strict Types Payload             |   ⚠️   |
 
 !!! Note: Typescript Strict now is only with response.
 
