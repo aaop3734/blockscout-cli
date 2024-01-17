@@ -1,8 +1,12 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "target": "es5",
-    "module": "commonjs",
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
     "noImplicitAny": true,
     "outDir": "dist",
     "rootDir": ".",
