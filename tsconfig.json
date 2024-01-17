@@ -9,9 +9,8 @@
     "noUnusedLocals": true,
     "noImplicitAny": true,
     "outDir": "dist",
-    "rootDir": ".",
-    "lib": ["es6", "dom"],
-    "typeRoots": ["node_modules/@types"]
+    "rootDir": "./src",
+    "lib": ["es6", "dom"]
   },
   "exclude": ["dist", "node_modules"]
 }

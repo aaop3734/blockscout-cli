@@ -2871,7 +2871,7 @@ export const DefaultApiAxiosParamCreator = function (
     /**
      *
      * @summary query read method
-     * @param {ReadMethodQueryBody} body
+     * @param {SmartContractReadQueryMethodBody} body
      * @param {string} address_hash Address hash
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

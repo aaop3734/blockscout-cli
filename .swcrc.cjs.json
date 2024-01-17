@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/swcrc",
+  "module": {
+    "type": "commonjs"
+  },
+  "jsc": {
+    "target": "esnext",
+    "parser": {
+      "syntax": "typescript",
+      "dynamicImport": true
+    },
+    "baseUrl": "./src"
+  },
+  "minify": true
+}
