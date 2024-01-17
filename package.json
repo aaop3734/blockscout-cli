@@ -1,6 +1,6 @@
 {
   "name": "blockscout-cli",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Blockscout Client for any Front-end framework based on JavaScript",
   "author": "@aaop3734",
   "keywords": [
@@ -36,10 +36,11 @@
     "node": ">= 14"
   },
   "dependencies": {
-    "axios": "^0.27.2"
+    "axios": "^1.6.5"
   },
   "devDependencies": {
     "@types/node": "^20.5.7",
+    "abitype": "^0.10.3",
     "prettier": "^3.0.3",
     "typescript": "^5.2.2"
   }

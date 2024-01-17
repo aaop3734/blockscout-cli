@@ -71,7 +71,12 @@ export default Home
 | NextJS + Tanstack Query | ✅     |
 | React + Tanstack Query  | ✅     |
 | NodeJS with ES Modules  | ⚠️     |
-| Typescript Strict       | ❌     |
+| Typescript Strict       | ⚠️     |
+
+!!! Note: Typescript Strict now is only with response.
+
+- Types is base on [Blockscout front-end](https://github.com/blockscout/frontend/tree/main/types/api). I modified to adapt with api-docs
+  > example: [eth blockscout scan](https://eth.blockscout.com/api-docs)
 
 ## License
 
