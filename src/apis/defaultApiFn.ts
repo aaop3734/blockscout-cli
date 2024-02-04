@@ -41,6 +41,7 @@ import type {
   ChartTransactionResponse,
 } from '../types/api/charts'
 import type {
+  AddressNftResponse,
   NftInstance,
   NftInstanceHoldersResponse,
   NftInstancesResponse,
@@ -89,6 +90,31 @@ export const DefaultApiFp = function (configuration?: Configuration) {
       const localVarAxiosArgs = await DefaultApiAxiosParamCreator(
         configuration,
       ).getAddress(address_hash, options)
+      return (
+        axios: AxiosInstance = globalAxios,
+        basePath: string = BASE_PATH,
+      ) => {
+        const axiosRequestArgs: AxiosRequestConfig = {
+          ...localVarAxiosArgs.options,
+          url: basePath + localVarAxiosArgs.url,
+        }
+        return axios.request(axiosRequestArgs)
+      }
+    },
+
+    async getAddressNft(
+      address_hash: string,
+      type?: string,
+      options?: AxiosRequestConfig,
+    ): Promise<
+      (
+        axios?: AxiosInstance,
+        basePath?: string,
+      ) => Promise<AxiosResponse<AddressNftResponse>>
+    > {
+      const localVarAxiosArgs = await DefaultApiAxiosParamCreator(
+        configuration,
+      ).getAddressNft(address_hash, type, options)
       return (
         axios: AxiosInstance = globalAxios,
         basePath: string = BASE_PATH,
