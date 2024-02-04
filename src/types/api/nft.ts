@@ -1,4 +1,5 @@
 import type {
+  NFTTokenType,
   TokenHolder,
   TokenHoldersPagination,
   TokenInfo,
@@ -22,4 +23,22 @@ export interface NftInstancesResponse {
 export interface NftInstanceHoldersResponse {
   items: Array<TokenHolder>
   next_page_params: TokenHoldersPagination | null
+}
+
+export type AddressNftPagination = {
+  items_count: number
+  token_contract_address_hash: string
+  token_id: string
+  token_type: NFTTokenType
+}
+
+export interface AddressNft extends TokenInstance {
+  token: TokenInfo<NFTTokenType> | null
+  token_type: NFTTokenType
+  value: string
+}
+
+export interface AddressNftResponse {
+  items: Array<AddressNft>
+  next_page_params: TokenInventoryPagination | null
 }
